@@ -1,0 +1,38 @@
+﻿@model WebApplication2.Models.TestClass
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form asp-action="Calculate" asp-controller="Test">
+    <div>
+        Item Desc:<input asp-for="itemdesc"  id="InputItemDesc">
+        <br />
+        UOM:<select  id="SelectUOM" asp-for="UOM" >
+            <option value="1">PCS</option>
+            <option value="12">LUSIN</option>
+            <option value="24">BOX</option>
+        </select>
+        <br />
+        qty:<input  id="InputQuantity" asp-for="quantity"  >
+        <br />
+        unitprice<input  id="InputUnitPrice" asp-for="UnitPrice"  >
+        <br />
+        discount<input  id="InputDiscount" asp-for="Discount"  >
+        <br />
+        <br />
+        <br />
+        qtykecil<input  id="InputQtyKecil" asp-for="qtykecil"  readonly>
+        <br />
+        discountamount<input  id="InputDiscountAmt" asp-for="DiscAmt"  readonly>
+        <br />
+        total<input  id="InputTotal" asp-for="Total"  readonly>
+        <div>
+            <button  style="width: 100%;" data-style = "expand-left" id="btnsubmit"  >Calculate</button>
+        </div>
+        
+
+    </div>
+</form>
+
+
